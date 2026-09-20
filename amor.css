@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("62.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frase {
+    position: absolute;
+    right: 8%;
+    top: 46%;
+
+    color: #dce7dc;
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    transition: 
+        text-shadow 0.5s ease,
+        color 0.5s ease,
+        transform 0.5s ease;
+}
+
+.frase:hover {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.9),
+        0 0 12px rgba(220, 240, 220, 0.8),
+        0 0 25px rgba(220, 240, 220, 0.6),
+        0 0 45px rgba(220, 240, 220, 0.35);
+
+    transform: translateY(-2px);
+
+    animation: brillo 2s ease-in-out infinite alternate;
+}
+
+@keyframes brillo {
+    from {
+        text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.8),
+            0 0 15px rgba(220, 240, 220, 0.6),
+            0 0 30px rgba(220, 240, 220, 0.35);
+    }
+
+    to {
+        text-shadow:
+            0 0 8px rgba(255, 255, 255, 1),
+            0 0 20px rgba(220, 240, 220, 0.9),
+            0 0 40px rgba(220, 240, 220, 0.6),
+            0 0 60px rgba(220, 240, 220, 0.3);
+    }
+}

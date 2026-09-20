@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("fondoinicio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mensaje {
+    position: absolute;
+
+    left: 8%;
+    bottom: 10%;
+    width: 350px;
+    color: #2e2925;
+    
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.camara {
+    position: absolute;
+
+    right: 8%;
+    top: 10%;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.camara img {
+    width: 380px;
+    display: block;
+}
+
+.camara:hover {
+    transform: translateY(-6px) scale(1.08);
+}
+
+.carta {
+    position: absolute;
+
+    right: 10%;
+    top: 47%;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.carta img {
+    width: 240px;
+    display: block;
+}
+
+.carta:hover {
+    transform: translateY(-6px) scale(1.08);
+}
+
+.reproductor {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    width: 250px;
+}
+
+.barra-musica {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #292522;
+}
+
+.progreso {
+    position: absolute;
+    left: 0;
+    top: 19px;
+    width: 7px;
+    height: 7px;
+    background-color: #292522;
+    border-radius: 50%;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 18px;
+}
+
+.controles button {
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #292522;
+    cursor: pointer;
+}
+
+.cancion {
+    text-align: center;
+    color: #292522;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    margin-bottom: 8px;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
