@@ -3,24 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    overflow-x: auto;
+}
 
 body {
     min-height: 100vh;
-
+    min-width: 1500px;
+    width: 100vw;
+    overflow-x: visible;
     background-image: url("fondoinicio.png");
-    background-size: cover;
-    background-position: center;
+    background-size: 100vw 100vh;
+    background-position: left top;
     background-repeat: no-repeat;
 }
 
 .mensaje {
     position: absolute;
-
-    left: 8%;
+    left: 15%;
     bottom: 10%;
     width: 350px;
     color: #2e2925;
-    
     font-family: Georgia, serif;
     font-size: 18px;
     line-height: 1.5;
@@ -28,12 +31,9 @@ body {
 
 .camara {
     position: absolute;
-
-    right: 8%;
+    left: 78%;
     top: 10%;
-
     display: block;
-
     transition: transform 0.3s ease;
 }
 
@@ -48,17 +48,14 @@ body {
 
 .carta {
     position: absolute;
-
-    right: 10%;
+    left: 82%;
     top: 47%;
-
     display: block;
-
     transition: transform 0.3s ease;
 }
 
 .carta img {
-    width: 240px;
+    width: 220px;
     display: block;
 }
 
@@ -68,7 +65,7 @@ body {
 
 .reproductor {
     position: absolute;
-    right: 2%;
+    left: 74%;
     bottom: 2%;
     width: 250px;
 }
@@ -113,4 +110,56 @@ body {
     margin-bottom: 8px;
     transition: opacity 0.3s ease;
     white-space: nowrap;
+}
+
+.aviso-cartas {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.aviso-contenido {
+    position: relative;
+    width: 420px;
+    padding: 45px 50px;
+    background: #f1e8d8;
+    color: #2e2925;
+    text-align: center;
+    font-family: Georgia, serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.aviso-contenido h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.aviso-contenido p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.aviso-contenido strong {
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.aviso-contenido span {
+    display: block;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.cerrar-aviso {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 25px;
+    cursor: pointer;
 }

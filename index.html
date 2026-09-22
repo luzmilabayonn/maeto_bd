@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi todo</title>
     <link rel="stylesheet" href="amor.css">
 </head>
+
 <body>
-    <a href="inicio.html" class="frase">
-        "Te amo más que ayer<br>
-        menos que mañana"
-    </a>
+    <div class="portada" id="portada">
+        <a href="#" class="frase" id="entrar">
+            "Te amo más que ayer<br>
+            menos que mañana"
+        </a>
+    </div>
+
+    <iframe
+        id="contenido"
+        src=""
+        frameborder="0">
+    </iframe>
+
+    <div class="reproductor">
+
+        <div class="cancion">Voyagers - T&K</div>
+
+        <div class="barra-musica"></div>
+
+        <div class="progreso"></div>
+
+        <div class="controles">
+            <button>◀◀</button>
+            <button>▶</button>
+            <button>▶▶</button>
+        </div>
+
+    </div>
+
+
+    <audio id="musica"></audio>
+    <script src="main.js"></script>
+
+    <script>
+        const entrar = document.getElementById("entrar");
+        const portada = document.getElementById("portada");
+        const contenido = document.getElementById("contenido");
+
+        entrar.addEventListener("click", function(event) {
+            event.preventDefault();
+            contenido.src = "inicio.html";
+            portada.style.display = "none";
+        });
+    </script>
+
 </body>
 </html>

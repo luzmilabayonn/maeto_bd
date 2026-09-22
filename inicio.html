@@ -17,30 +17,45 @@
         <img src="camara.png" alt="Recuerdos">
     </a>
 
-    <a href="cartas.html" class="carta">
+    <a href="#" class="carta" id="boton-cartas">
     <img src="carta.png" alt="Cartas">
-    </a>
+</a>
 
-    <div class="reproductor">
-    <div class="cancion">Voyagers - T&K</div>
-    <div class="barra-musica"></div>
-        <div class="progreso"></div>
-    <div class="controles">
-        <button>◀◀</button>
-        <button>▶</button>
-        <button>▶▶</button>
+<div class="aviso-cartas" id="aviso-cartas">
+    <div class="aviso-contenido">
+        <div class="cerrar-aviso" id="cerrar-aviso">×</div>
+        <h2>Cartas cerradas</h2>
+        <p>
+            Todavía falta un tiempo para esto...
+        </p>
+        <p>
+            Podrías intentar volver el<br>
+            <strong>22 de octubre</strong>
+        </p>
+        <span>💌</span>
     </div>
-    </div>
+</div>
 
-    <iframe
-    src="https://open.spotify.com/embed/playlist/074AvsRzC7rALC4Bo5VZIi"
-    width="1"
-    height="1"
-    frameborder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-    </iframe>
+<script>
+    const botonCartas = document.getElementById("boton-cartas");
+    const avisoCartas = document.getElementById("aviso-cartas");
+    const cerrarAviso = document.getElementById("cerrar-aviso");
 
-    <audio id="musica""></audio>
-    <script src="main.js"></script>
+    botonCartas.addEventListener("click", function(event) {
+        event.preventDefault();
+        avisoCartas.style.display = "flex";
+    });
+
+    cerrarAviso.addEventListener("click", function() {
+        avisoCartas.style.display = "none";
+    });
+
+    avisoCartas.addEventListener("click", function(event) {
+        if (event.target === avisoCartas) {
+            avisoCartas.style.display = "none";
+        }
+    });
+</script>
+
 </body>
 </html>
